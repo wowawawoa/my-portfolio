@@ -4,6 +4,10 @@ import Link from "next/link";
 import SlideUp from "./SlideUp";
 
 import { BsGithub, BsArrowUpRightSquare, BsYoutube } from "react-icons/bs";
+import { FaReact, FaNodeJs } from "react-icons/fa";
+import { BiLogoMongodb } from "react-icons/bi";
+import { TbBrandNextjs } from "react-icons/tb";
+import { SiMui, SiChakraui, SiAuth0, SiOpenai  } from "react-icons/si";
 
 const projects = [
   {
@@ -14,6 +18,12 @@ const projects = [
     github: "https://github.com/wowawawoa/coffeetopia-cra-new",
     link: "https://coffeetopia-cra-new.vercel.app/",
     video: "https://youtu.be/wt6fYOZuaK0",
+    icon: [
+      <FaReact key="react-icon" size={30} className="text-teal-500" />,
+      <FaNodeJs key="nodejs-icon" size={30} className="text-green-500" />,
+      <BiLogoMongodb key="mongodb-icon" size={30} className="text-green-500" />,
+      <SiMui key="mui-icon" size={30} color="#007fff" />,
+    ],
   },
   {
     name: "PetNanny",
@@ -23,6 +33,13 @@ const projects = [
     github: "https://github.com/wowawawoa/pn-app",
     link: "https://pn-app-eight.vercel.app/",
     video: "https://youtu.be/esGcdVS612c",
+    icon: [
+      <FaReact key="react-icon" size={30} className="text-teal-500" />,
+      <FaNodeJs key="nodejs-icon" size={30} className="text-green-500" />,
+      <BiLogoMongodb key="mongodb-icon" size={30} className="text-green-500" />,
+      <TbBrandNextjs key="nextjs-icon" size={30} />,
+      <SiChakraui key="chakraui-icon" size={30} style={{borderRadius: "50%", backgroundColor: "white", color: "#319795"}} />,
+    ],
   },
   {
     name: "ForKitchen",
@@ -32,6 +49,10 @@ const projects = [
     github: "https://github.com/wowawawoa/forkitchen-nextjs",
     link: "https://www.forkitchenadelaide.com.au/",
     video: "",
+    icon: [
+      <TbBrandNextjs key="nextjs-icon" size={30} />,
+      <SiMui key="mui-icon" size={30} color="#007fff" />,
+    ],
   },
   {
     name: "AIBoostedBlog",
@@ -41,6 +62,12 @@ const projects = [
     github: "https://github.com/wowawawoa/AI-Blog",
     link: "https://aiboostedblog-mw868.ondigitalocean.app/",
     video: "",
+    icon: [
+      <TbBrandNextjs key="nextjs-icon" size={30} />,
+      <BiLogoMongodb key="mongodb-icon" size={30} className="text-green-500" />,
+      <SiAuth0 key="auth0-icon" size={30} />,
+      <SiOpenai key="openai-icon" size={30} />,
+    ]
   },
 ];
 
@@ -53,9 +80,9 @@ const ProjectsSection = () => {
       </h1>
 
       <div className="flex flex-col space-y-28">
-        {projects.map((project, idx) => {
+        {projects.map((project) => {
           return (
-            <div key={idx}>
+            <div key={project.name}>
               <SlideUp offset="-300px 0px -300px 0px">
                 <div className="flex flex-col  animate-slideUpCubiBezier animation-delay-2 md:flex-row md:space-x-12">
                   <div className=" md:w-1/2">
@@ -95,6 +122,9 @@ const ProjectsSection = () => {
                           />
                         </Link>
                       )}
+                    </div>
+                    <div className="flex flex-row align-bottom space-x-4 mt-4">
+                      {project.icon}
                     </div>
                   </div>
                 </div>
