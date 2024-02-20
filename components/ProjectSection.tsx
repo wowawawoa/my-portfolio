@@ -7,7 +7,7 @@ import { BsGithub, BsArrowUpRightSquare, BsYoutube } from "react-icons/bs";
 import { FaReact, FaNodeJs } from "react-icons/fa";
 import { BiLogoMongodb } from "react-icons/bi";
 import { TbBrandNextjs } from "react-icons/tb";
-import { SiMui, SiChakraui, SiAuth0, SiOpenai  } from "react-icons/si";
+import { SiMui, SiChakraui, SiAuth0, SiOpenai } from "react-icons/si";
 
 const projects = [
   {
@@ -19,10 +19,22 @@ const projects = [
     link: "https://coffeetopia-cra-new.vercel.app/",
     video: "https://youtu.be/wt6fYOZuaK0",
     icon: [
-      <FaReact key="react-icon" size={30} className="text-teal-500" />,
-      <FaNodeJs key="nodejs-icon" size={30} className="text-green-500" />,
-      <BiLogoMongodb key="mongodb-icon" size={30} className="text-green-500" />,
-      <SiMui key="mui-icon" size={30} color="#007fff" />,
+      <Link key="react" href="https://react.dev/" target="_blank">
+        <FaReact key="react-icon" size={30} className="text-teal-500" />
+      </Link>,
+      <Link key="nodejs" href="https://nodejs.org/" target="_blank">
+        <FaNodeJs key="nodejs-icon" size={30} className="text-green-500" />
+      </Link>,
+      <Link key="mongodb" href="https://www.mongodb.com/" target="_blank">
+        <BiLogoMongodb
+          key="mongodb-icon"
+          size={30}
+          className="text-green-500"
+        />
+      </Link>,
+      <Link key="mui" href="https://mui.com/" target="_blank">
+        <SiMui key="mui-icon" size={30} color="#007fff" />
+      </Link>,
     ],
   },
   {
@@ -34,11 +46,33 @@ const projects = [
     link: "https://pn-app-eight.vercel.app/",
     video: "https://youtu.be/esGcdVS612c",
     icon: [
-      <FaReact key="react-icon" size={30} className="text-teal-500" />,
-      <FaNodeJs key="nodejs-icon" size={30} className="text-green-500" />,
-      <BiLogoMongodb key="mongodb-icon" size={30} className="text-green-500" />,
-      <TbBrandNextjs key="nextjs-icon" size={30} />,
-      <SiChakraui key="chakraui-icon" size={30} style={{borderRadius: "50%", backgroundColor: "white", color: "#319795"}} />,
+      <Link key="react" href="https://react.dev/" target="_blank">
+        <FaReact key="react-icon" size={30} className="text-teal-500" />
+      </Link>,
+      <Link key="nodejs" href="https://nodejs.org/" target="_blank">
+        <FaNodeJs key="nodejs-icon" size={30} className="text-green-500" />
+      </Link>,
+      <Link key="mongodb" href="https://www.mongodb.com/" target="_blank">
+        <BiLogoMongodb
+          key="mongodb-icon"
+          size={30}
+          className="text-green-500"
+        />
+      </Link>,
+      <Link key="nextjs" href="https://nextjs.org/" target="_blank">
+        <TbBrandNextjs key="nextjs-icon" size={30} />
+      </Link>,
+      <Link key="charkui" href="https://chakra-ui.com/" target="_blank">
+        <SiChakraui
+          key="chakraui-icon"
+          size={30}
+          style={{
+            borderRadius: "50%",
+            backgroundColor: "white",
+            color: "#319795",
+          }}
+        />
+      </Link>,
     ],
   },
   {
@@ -50,8 +84,12 @@ const projects = [
     link: "https://www.forkitchenadelaide.com.au/",
     video: "",
     icon: [
-      <TbBrandNextjs key="nextjs-icon" size={30} />,
-      <SiMui key="mui-icon" size={30} color="#007fff" />,
+      <Link key="nextjs" href="https://nextjs.org/" target="_blank">
+        <TbBrandNextjs key="nextjs-icon" size={30} />
+      </Link>,
+      <Link key="mui" href="https://mui.com/" target="_blank">
+        <SiMui key="mui-icon" size={30} color="#007fff" />
+      </Link>,
     ],
   },
   {
@@ -63,11 +101,23 @@ const projects = [
     link: "https://aiboostedblog-mw868.ondigitalocean.app/",
     video: "",
     icon: [
-      <TbBrandNextjs key="nextjs-icon" size={30} />,
-      <BiLogoMongodb key="mongodb-icon" size={30} className="text-green-500" />,
-      <SiAuth0 key="auth0-icon" size={30} />,
-      <SiOpenai key="openai-icon" size={30} />,
-    ]
+      <Link key="nextjs" href="https://nextjs.org/" target="_blank">
+        <TbBrandNextjs key="nextjs-icon" size={30} />
+      </Link>,
+      <Link key="mongodb" href="https://www.mongodb.com/" target="_blank">
+        <BiLogoMongodb
+          key="mongodb-icon"
+          size={30}
+          className="text-green-500"
+        />
+      </Link>,
+      <Link key="auth0" href="https://auth0.com/" target="_blank">
+        <SiAuth0 key="auth0-icon" size={30} />
+      </Link>,
+      <Link key="openai" href="https://openai.com/" target="_blank">
+        <SiOpenai key="openai-icon" size={30} />
+      </Link>,
+    ],
   },
 ];
 
